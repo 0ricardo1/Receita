@@ -4,49 +4,62 @@
     margin: 0;
 }
 
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+ul {
+    padding-left: 40px
+}
+
 body {
     background-color: #F3E5D8;
 }
 
 #corpo {
-    height: 5000px;
-    width: 1440px;
     margin: 500px auto;
     border-radius: 50px;
     background-color:  white;
+    padding: 0 40px;
 }
 
 #omelete {
     text-align: center;
     padding: 60px;
-    border-radius: 60%;
+    border-radius: 60px;
+    overflow: hidden;
 }
 
+#omelete img {
+    border-radius: 20px;
+}
+
+
 h1 {
-    position: relative;
-    left: 60px;
     font-size: 80px;
 }
 
 p {
-    position: relative;
-    left: 60px;
     font-size: 25px;
 }
 
 #vermelho {
     height: 250px;
-    width: 1312px;
     margin: auto;
     border-radius: 32px;
     background-color: hsl(330, 100%, 98%);
 }
 
 #vermelho ul {
-    position: relative;
-    left: 60px;
     font-size: 30px;
-    padding: 35px 0px;
+    padding: 35px 50px;
     color: hsl(332, 51%, 32%)
 }
 
@@ -56,9 +69,11 @@ p {
     padding: 4px;
 }
 
+#ingredientes {
+    margin: auto;
+}
+
 #ingredientes ul {
-    position: relative;
-    left: 60px;
     font-size: 45px;
     color: hsl(14, 45%, 36%);
     padding: 50px 0;
@@ -67,14 +82,17 @@ p {
 #ingredientes ul li {
     font-size: 23px;
     color: black;
-    position: relative;
-    left: 20px;
     padding: 10px;
+}   
+
+#instruções {
+    border-top: solid hsl(30, 10%, 34%);
+    border-bottom: solid hsl(30, 10%, 34%);
+    border-width: 0.5px;
+    margin: auto;
 }
 
 #instruções ul {
-    position: relative;
-    left: 60px;
     font-size: 45px;
     color: hsl(14, 45%, 36%);
     padding: 50px 0;
@@ -83,8 +101,6 @@ p {
 #instruções ul li {
     font-size: 23px;
     color: black;
-    position: relative;
-    left: 20px;
     padding: 10px;
     list-style-type: decimal;
 }
@@ -93,26 +109,46 @@ p {
     color: hsl(14, 45%, 36%);
 }
 
+#nutrição {
+    margin: auto;
+}
+
 #nutrição p {
-    position: relative;
-    left: 60px;
     font-size: 45px;
     color: hsl(14, 45%, 36%);
     padding: 50px 0;
 }
 
 #nutrição span {
-    position: relative;
-    left: 60px;
     font-size: 23px;
     color: black;
     padding: 50px 0;
 }
 
 #nutrição table {
-    position: relative;
-    left: 60px;
     font-size: 23px;
     color: black;
     padding: 50px 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#nutrição table td {
+    padding: 20px;
+    width: 500px;
+}
+
+#nutrição table tr:not(:last-child) td {
+    border-bottom: 1px solid hsl(30, 10%, 34%);
+    border-width: 0.5px;
+}
+
+#nutrição table td strong {
+    color: hsl(14, 45%, 36%);
+}
+
+@media(max-width:800px) {
+    p, span, h1, h2, h3, h4, h5 strong {
+        font-size: 0.8rem;
+    }
 }
